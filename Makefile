@@ -8,6 +8,9 @@ build:
 run: build
 	mvn exec:java -Dexec.mainClass="Main"
 
+bench: build
+	mvn exec:java -Dexec.mainClass="Benchmark" -q
+
 clean:
 	cd iou-contract && cargo clean
 	mvn clean
